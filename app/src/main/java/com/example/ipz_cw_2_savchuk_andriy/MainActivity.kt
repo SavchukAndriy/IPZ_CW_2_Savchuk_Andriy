@@ -80,3 +80,10 @@ fun SignInForm(
             label = {("Email") },
             modifier = Modifier.fillMaxWidth()
         )
+        Spacer(modifier = Modifier.height(16.dp))
+        TextField(
+            value = password,
+            onValueChange = onPasswordChange,
+            label = {("Password") },
+            modifier = Modifier.fillMaxWidth()
+        )
