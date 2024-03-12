@@ -56,3 +56,14 @@ fun SignInScreen() {
         )
     }
 }
+
+@Composable
+fun SignInForm(
+    email: TextFieldValue,
+    onEmailChange: (TextFieldValue) -> Unit,
+    password: TextFieldValue,
+    onPasswordChange: (TextFieldValue) -> Unit,
+    onSignIn: () -> Unit
+) {
+
+}
