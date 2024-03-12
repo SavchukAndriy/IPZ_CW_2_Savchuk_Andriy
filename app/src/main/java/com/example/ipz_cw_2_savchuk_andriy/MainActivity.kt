@@ -15,6 +15,8 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.ipz_cw_2_savchuk_andriy.ui.theme.IPZ_CW_2_Savchuk_AndriyTheme
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.unit.dp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,6 +66,10 @@ fun SignInForm(
     password: TextFieldValue,
     onPasswordChange: (TextFieldValue) -> Unit,
     onSignIn: () -> Unit
-) {
-
-}
+) {Surface(color = MaterialTheme.colorScheme.background) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center}}
