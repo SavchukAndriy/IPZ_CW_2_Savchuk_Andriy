@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.ipz_cw_2_savchuk_andriy.ui.theme.IPZ_CW_2_Savchuk_AndriyTheme
+import androidx.compose.runtime.setValue
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,3 +41,18 @@ fun SignInScreen() {
             email = TextFieldValue()
             password = TextFieldValue()
             signInSuccess = false
+        })
+    } else {
+        SignInForm(
+            email = email,
+            onEmailChange = { email = it },
+            password = password,
+            onPasswordChange = { password = it },
+            onSignIn = {
+                if (email.text.isNotBlank() && password.text.isNotBlank()) {
+                    signInSuccess = true
+                }
+            }
+        )
+    }
+}
