@@ -72,4 +72,11 @@ fun SignInForm(
             .fillMaxSize()
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center}}
+        verticalArrangement = Arrangement.Center
+    ) {
+        TextField(
+            value = email,
+            onValueChange = onEmailChange,
+            label = {("Email") },
+            modifier = Modifier.fillMaxWidth()
+        )
