@@ -120,3 +120,9 @@ fun SignInSuccessScreen(email: String, onSignOut: () -> Unit) {
         }
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewSignInScreen() {
+    SignInScreen()
+}
