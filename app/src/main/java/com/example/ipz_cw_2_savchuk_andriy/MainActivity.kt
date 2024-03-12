@@ -109,10 +109,14 @@ fun SignInSuccessScreen(email: String, onSignOut: () -> Unit) {
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
-        ){
-
+        ) {
+            ("Sign In success")
+            Spacer(modifier = Modifier.height(16.dp))
+            ("Email: $email")
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(onClick = onSignOut) {
+                ("Sign Out")
+            }
         }
-
     }
 }
-
